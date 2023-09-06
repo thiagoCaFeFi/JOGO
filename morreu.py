@@ -30,3 +30,18 @@ def chama(rabo):
     gameOver(rabo)
 
 curses.wrapper(chama)
+largato = int(input())
+print("1 - Sair do jogo")
+print("2 - Voltar ao menu")
+def escolha(largato):
+
+   
+    
+    if largato == 1:
+        curses.endwin()
+    elif largato == 2:
+        exibirmenu(stdscr)
+    else:    
+        largato = int(input(("Opção inválida...Digite novamente ")))
+        escolha(largato)
+escolha(largato)
